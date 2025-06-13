@@ -7,7 +7,7 @@ def kalkulator():
 
     wybor = input("Wybierz opcję: ")
 
-    if wybor == "1":
+    if wybor == "5":
         a = float(input("Podaj pierwszą liczbę: "))
         b = float(input("Podaj drugą liczbę: "))
         print("Wynik dodawania: ", a + b)
