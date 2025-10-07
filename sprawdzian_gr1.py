@@ -1,14 +1,14 @@
-#zadanie 1.
-# def samochod():
-#     marka = input("Podaj marke samochodu: ")
-#     model = input("Podaj model samochodu: ")
-#     print("Twój samochód to:", marka, model)
+                                                #zadanie 1.
+def samochod():
+    marka = input("Podaj marke samochodu: ")
+    model = input("Podaj model samochodu: ")
+    print("Twój samochód to:", marka, model)
 
-# samochod()
-# samochod()
+samochod()
+samochod()
 
-#zadanie 2.
 
+                                                #zadanie 2.
 import math
 
 def f(x):
@@ -25,3 +25,13 @@ while True:
         print("Nie można obliczyć pierwiastka z liczby ujemnej!")
 
 print("Koniec programu.")
+
+
+                                                #zadanie 3.
+def wyswietl_jedynki(lista):
+    for liczba in lista:
+        if liczba == 1:
+            print(liczba, end=",")
+
+dane = [1, 0, 0, 1, 1, 0, 1,]
+wyswietl_jedynki(dane)
