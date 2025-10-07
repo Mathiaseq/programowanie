@@ -26,6 +26,6 @@ def odwroc_liste(lista):
     for i in range(len(lista) - 1, -1, -1):
         print(lista[i], end=",")
 
-# przykładowe wywołanie funkcji
+
 dane = [1, 2, 3, 4, 5]
 odwroc_liste(dane)
