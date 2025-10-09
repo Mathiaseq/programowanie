@@ -20,24 +20,22 @@ def print_tree(lights):
         "       |||        "
     ]
     
-    colors={
-        'R': '\033[31m',
-        'G': '\033[32m',
-        'Y': '\033[33m',
-        'B': '\033[34m',
-        'M': '\033[35m',
-        'C': '\033[36m',
-        'W': '\033[37m'
-    }
+    colors=[
+        '\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m'
+    ]
+    
 
     time.sleep(1)
     
 
+    color_index = 0
     for light in lights:
-        color = colors.get(light, '\033[0m') 
+        color = colors[color_index % len(colors)] 
+        color_index += 1
         for line in tree:
             print(color + line + '\033[0m')
         print()
+
 
 lights = ['G', 'Y', 'G', 'R', 'Y']
 print_tree(lights)
