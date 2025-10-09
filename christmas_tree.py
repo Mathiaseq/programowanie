@@ -29,13 +29,15 @@ def print_tree(lights):
         'C': '\033[36m',
         'W': '\033[37m'
     }
-    
 
     time.sleep(1)
     
 
     for light in lights:
-        color = colors.get(light, '\033[0m')  
+        color = colors.get(light, '\033[0m') 
         for line in tree:
             print(color + line + '\033[0m')
         print()
+
+lights = ['G', 'Y', 'G', 'R', 'Y']
+print_tree(lights)
