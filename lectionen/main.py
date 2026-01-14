@@ -1,13 +1,7 @@
-def sprawdz_x(x):
-    if x < -5:
-        wynik = (x - 1)
-    elif -5 <= x <= 5:
-        wynik = x ** 2 + 3 * x - 2
-    else:
-        wynik = (1 ** (1 / 6)) / (x - 1)
+from module import suml, prodl
 
-    return wynik
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(suml(zeroes))
+print(prodl(ones))
 
-x = float(input("Podaj wartość x: "))
-wynik = sprawdz_x(x)
-print("Wynik:", wynik)
