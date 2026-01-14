@@ -1,1 +1,2 @@
-import module
+print("I like to be a module.")
+
