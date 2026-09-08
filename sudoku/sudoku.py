@@ -3,7 +3,6 @@
 def checkset(digs):
     return sorted(list(digs)) == [chr(x + ord('0')) for x in range(1, 10)]
 
-
 # A list of rows representing the sudoku.
 rows = [ ]
 for r in range(9):
