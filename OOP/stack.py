@@ -12,13 +12,20 @@ class Stack:
         del self.__stack_list[-1]
         return val
 
+    def is_empty(self):
+        return len(self.__stack_list) == 0
+
+x=[]
+while True:
+    nazwisko=input("Podaj nazwisko: ")
+    if nazwisko=="":
+        break
+    x.append(nazwisko)
 
 stack_object = Stack()
 
-stack_object.push(3)
-stack_object.push(2)
-stack_object.push(1)
+for item in x:
+    stack_object.push(item) 
 
-print(stack_object.pop())
-print(stack_object.pop())
-print(stack_object.pop())
+while not stack_object.is_empty():
+    print(stack_object.pop())
