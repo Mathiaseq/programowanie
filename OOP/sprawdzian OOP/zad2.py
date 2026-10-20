@@ -14,10 +14,10 @@ class Stos:
 
 stos = Stos()
 
-stos.dodaj(int(input("Podaj element do dodania na stos: ")))
-stos.dodaj(int(input("Podaj element do dodania na stos: ")))
-stos.dodaj(int(input("Podaj element do dodania na stos: ")))
-stos.dodaj(int(input("Podaj element do dodania na stos: ")))
+stos.dodaj(float(input("Podaj element do dodania na stos: ")))
+stos.dodaj(float(input("Podaj element do dodania na stos: ")))
+stos.dodaj(float(input("Podaj element do dodania na stos: ")))
+stos.dodaj(float(input("Podaj element do dodania na stos: ")))
 stos.wyswietl()
 
 print("Usunięto element:", stos.usun())
