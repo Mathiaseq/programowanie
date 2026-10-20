@@ -6,14 +6,14 @@ class Figura:
     def kolor(self, kolor):
         self.kolor = kolor
         return self.kolor
-    def punkt(self, x, y):
-        self.x = x
-        self.y = y
-        return self.x, self.y
-    def prostokat(self, bok):
+    def obwod_prostokata(self, bok):
         self.bok = bok
-        return self.bok**2
+        return 4 * self.bok
 
-print("Współrzędne punktu:", Figura(10, 20).punkt(10, 20))
-print("Kolor punktu:", Figura(10, 20).kolor("czerwony"))
-print("Pole prostokąta:", Figura(10, 20).prostokat(5))
+
+x=int(input("Podaj współrzędną x: "))
+y=int(input("Podaj współrzędną y: "))
+k=str(input("Podaj kolor: "))
+
+print("Kolor punktu:", Figura(k).kolor(k))
+print("Obwód prostokąta:", Figura(k).obwod_prostokata(5))
