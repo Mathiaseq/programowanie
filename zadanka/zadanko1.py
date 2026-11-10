@@ -1,13 +1,19 @@
-suma = 0
-liczba = 0
+from pathlib import Path
+import matplotlib.pyplot as plt
 
-with open("plik.txt", encoding="utf-8") as plik:
+imiona = []
+oceny = []
+with open(Path(__file__).with_name("plik.txt"), encoding="utf-8") as plik:
     next(plik)
     for linia in plik:
         imie, ocena = linia.strip().split(". ", 1)[1].rsplit(" ", 1)
         ocena = float(ocena.replace(",", "."))
-        print(imie.strip(","), ocena)
-        suma += ocena
-        liczba += 1
+        imiona.append(imie.strip(","))
+        oceny.append(ocena)
 
-print("Średnia klasy:", round(suma / liczba, 2))
+srednia_klasy = sum(oceny) / len(oceny)
+plt.bar(imiona, oceny)
+plt.axhline(srednia_klasy, color="red", label=f"Średnia klasy: {srednia_klasy:.2f}")
+plt.ylabel("Średnia ocen")
+plt.legend()
+plt.show()
