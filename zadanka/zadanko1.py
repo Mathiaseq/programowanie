@@ -1,17 +1,13 @@
-from pathlib import Path
-
 suma = 0
-liczba_uczniow = 0
+liczba = 0
 
-with open(Path(__file__).with_name("plik.txt"), encoding="utf-8") as plik:
-    next(plik)  # pomiń nagłówek
+with open("plik.txt", encoding="utf-8") as plik:
+    next(plik)
     for linia in plik:
-        dane = linia.strip().split(". ", 1)[1]
-        imie, srednia = dane.rsplit(" ", 1)
-        srednia = srednia.replace(",", ".")
+        imie, ocena = linia.strip().split(". ", 1)[1].rsplit(" ", 1)
+        ocena = float(ocena.replace(",", "."))
+        print(imie.strip(","), ocena)
+        suma += ocena
+        liczba += 1
 
-        print(imie.rstrip(","), srednia.replace(".", ","))
-        suma += float(srednia)
-        liczba_uczniow += 1
-
-print("Średnia całej klasy:", round(suma / liczba_uczniow, 2))
+print("Średnia klasy:", round(suma / liczba, 2))
