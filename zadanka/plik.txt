@@ -1,0 +1,6 @@
+LP. Imię, Średnia ocen
+1. Jaś, 3,29
+2. Małgosia 3,11
+3. Kuba 4,45
+4. Piotrek 2,63
+5. Ania 4,12
